@@ -1,0 +1,159 @@
+.btn-registration,
+.btn-transparent,
+.btn-slide,
+.btn-submit,
+.btn-video,
+.btn-choose,
+.btn-hash {
+	user-select: none;
+	transition: 0.3s;
+	font-weight: 500;
+	color: var(--black);
+	cursor: pointer;
+}
+.btn-registration {
+	border: 2px solid var(--white);
+	border-radius: 40px;
+	padding: 12px 32px;
+	font-size: 22px;
+	background-color: var(--white);
+	@include respond-to(tab-port-small) {
+		font-size: 18px;
+		font-weight: 600;
+		padding: 6px 30px;
+	}
+	&:hover,
+	&:active {
+		background-color: transparent;
+		color: var(--white);
+		border-color: var(--white);
+	}
+}
+.btn-transparent {
+	border: 1px solid var(--black);
+	border-radius: 28px;
+	background-color: transparent;
+	font-size: 18px;
+	padding: 5px 15px;
+	@include respond-to(phone) {
+		font-size: 14px;
+	}
+	&:hover,
+	&:active {
+		background-color: var(--black);
+		color: var(--white);
+	}
+}
+.btn-slide {
+	font-size: 14px;
+	color: var(--white);
+	border-radius: 20px;
+	padding: 7px 15px;
+	border: 1px solid var(--white);
+	@include respond-to(tab-port-small) {
+		font-size: 10px;
+		padding: 6px 10px;
+	}
+	&:hover,
+	&:active {
+		background-color: var(--white);
+		color: var(--black);
+	}
+	&:disabled {
+		background-color: var(--gray);
+		color: #d9d9d9;
+		cursor: default;
+	}
+}
+.btn-submit {
+	background-color: var(--black);
+	padding: 16px;
+	color: var(--white);
+	border-radius: 40px;
+	font-size: 18px;
+	border: 1px solid transparent;
+	width: 415px;
+	&:hover,
+	&:active {
+		background-color: var(--white);
+		color: var(--black);
+		border-color: var(--black);
+	}
+	@include respond-to(tab-port-small) {
+		width: 246px;
+	}
+	@include respond-to(phone-small) {
+		width: 230px;
+	}
+}
+.btn-video {
+	background-color: var(--white);
+	font-size: 20px;
+	color: var(--black);
+	border-radius: 40px;
+	padding: 10px;
+	width: 468px;
+	position: relative;
+	@include respond-to(tab-port-small) {
+		width: 300px;
+	}
+	&:hover,
+	&:active {
+		background-color: var(--black);
+		color: var(--white);
+		&::before {
+			left: 120px;
+			@include respond-to(tab-port-small) {
+				left: 35px;
+			}
+		}
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		background-image: url('../img/icons/play.png');
+		width: 25px;
+		height: 25px;
+		background-repeat: no-repeat;
+		top: 50%;
+		left: 100px;
+		transform: translateY(-50%);
+		transition: 0.3s;
+		@include respond-to(tab-port-small) {
+			left: 25px;
+		}
+	}
+}
+.btn-choose {
+	font-size: 18px;
+	color: var(--black);
+	border-radius: 40px;
+	padding: 10px 110px;
+	&:hover,
+	&:active {
+		background-color: var(--gray-button);
+	}
+}
+.btn-hash {
+	font-size: 12px;
+	padding: 7px 18px;
+	color: var(--white);
+	background-color: var(--black);
+	border: 1px solid var(--black);
+	border-radius: 28px;
+	@include respond-to(tab-port-small) {
+		padding: 7px 10px;
+	}
+	@include respond-to(phone-small) {
+		padding: 7px;
+	}
+	@media only screen and (max-width: 320px) {
+		padding: 6px;
+		font-size: 10px;
+	}
+	&:hover,
+	&:active {
+		background-color: var(--white);
+		color: var(--black);
+	}
+}
